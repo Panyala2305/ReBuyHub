@@ -15,7 +15,6 @@ const Header = () => {
 
   const logoutHandler = () => {
     localStorage.removeItem('userToken');
-    dispatch(messageClear()); // optional
     navigate('/');
   };
 
@@ -57,7 +56,7 @@ const Header = () => {
                   <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Settings</li>
                   <li onClick={logoutHandler} className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Logout</li>
 <Link to="/orders"><li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">My Orders</li></Link>
-                  <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">My Cart</li>
+                  <Link to="/cart"><li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">My Cart</li></Link>
                 </ul>
               </div>
             )}
