@@ -38,7 +38,7 @@ const Cart = () => {
       });
 
       const options = {
-        key: "rzp_test_QIsdIUEqBd65QW", // Razorpay Test Key
+        key: process.env.REACT_APP_RAZORPAY_KEY, // Razorpay Test Key
         amount: data.order.amount,
         currency: "INR",
         name: "ReBuyHub",
