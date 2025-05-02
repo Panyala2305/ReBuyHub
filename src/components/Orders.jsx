@@ -8,7 +8,7 @@ const MyOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/my-orders", {
+        const { data } = await axios.get("https://api.akash-building.space/api/my-orders", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`,
           },
